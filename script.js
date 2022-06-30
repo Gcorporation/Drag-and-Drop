@@ -62,6 +62,8 @@ function createItemEl(columnEl, column, item, index) {
   listEl.classList.add('drag-item');
   listEl.textContent = item;
   listEl.draggable = true;
+  listEl.setAttribute('ondragstart', 'drag(event)');
+
 
   //Append
 
@@ -97,6 +99,12 @@ function updateDOM() {
 
   // Run getSavedColumns only once, Update Local Storage
 
+}
+
+// when item starts dragging
+
+function drag(e) {
+  
 }
 
 // on Load
