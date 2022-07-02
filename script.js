@@ -22,6 +22,8 @@ let listArrays = [];
 
 // Drag Functionality
 
+let draggedItem;
+
 
 // Get Arrays from localStorage if available, set default values if not
 function getSavedColumns() {
@@ -104,9 +106,24 @@ function updateDOM() {
 // when item starts dragging
 
 function drag(e) {
-  
+  draggedItem = e.target;
+  console.log("draggedItem ----->" + draggedItem);
 }
 
 // on Load
 
 updateDOM();
+
+// Column allows for Item to Drop
+
+function allowDrop(e) {
+  e.preventDefault();
+}
+
+// when items enter column area
+
+// Dropping item in column
+
+function drop(e) {
+  e.preventDefault();
+}
