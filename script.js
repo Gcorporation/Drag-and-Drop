@@ -105,6 +105,22 @@ function updateDOM() {
   updateSavedColumns();
 }
 
+//Show Add item Input Box
+
+function showInputBox(column) {
+  addBtns[column].style.visibility = 'hidden';
+  saveItemBtns[column].style.display = 'flex';
+  addItemContainers[column].style.display = 'flex';
+}
+
+//Hide Add item Input Box
+
+function hideInputBox(column) {
+  addBtns[column].style.visibility = 'visible';
+  saveItemBtns[column].style.display = 'none';
+  addItemContainers[column].style.display = 'none';
+}
+
 // Allow arrays to reflect Drag and Drop Items
 
 function rebuildArrays() {
